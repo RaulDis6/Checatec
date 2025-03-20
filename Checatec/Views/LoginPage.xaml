@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Checatec.Views.LoginPage"
+             Title="Login"
+             BackgroundColor="White">
+
+    <StackLayout Padding="30" VerticalOptions="Center">
+
+        <!-- Título -->
+        <Label Text="ChecaTec"
+               FontSize="32"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               Margin="0,10,0,20"/>
+
+        <!-- Imagen opcional -->
+        <Image Source="logo.png"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               Margin="0,10,0,10"/>
+
+        <!-- Entrada para usuario/correo con borde negro -->
+        <Frame BorderColor="Black"
+               CornerRadius="5"
+               Padding="5"
+               BackgroundColor="Transparent"
+               Margin="0,5">
+            <Entry x:Name="entryUsuario"
+                   Placeholder="Usuario o Correo"
+                   Keyboard="Email"
+                   TextColor="Black"
+                   BackgroundColor="Transparent"/>
+        </Frame>
+
+        <!-- Entrada para contraseña con borde negro -->
+        <Frame BorderColor="Black"
+               CornerRadius="5"
+               Padding="5"
+               BackgroundColor="Transparent"
+               Margin="0,5">
+            <Entry x:Name="entryPassword"
+                   Placeholder="Contraseña"
+                   IsPassword="True"
+                   TextColor="Black"
+                   BackgroundColor="Transparent"/>
+        </Frame>
+
+        <!-- Botón de inicio de sesión -->
+        <Button Text="Iniciar Sesión"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                CornerRadius="10"
+                Clicked="OnLoginClicked"
+                Margin="0,10"/>
+
+        <!-- Opciones de recuperación de contraseña y ayuda -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+
+            <!-- Recuperar contraseña -->
+            <Label Text="¿Olvidaste tu contraseña?"
+                   TextColor="Blue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnRecuperarContrasenaTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label Text=" | "/>
+
+            <!-- Ayuda -->
+            <Label Text="Ayuda"
+                   TextColor="Blue">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnAyudaTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

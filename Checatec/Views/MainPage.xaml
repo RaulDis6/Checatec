@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xaml:ContentPage  xmlns:xaml="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Checatec.Views.MainPage"
+             Title="Inicio">
+
+    <xaml:StackLayout Padding="30" VerticalOptions="Center">
+
+        <!-- Mensaje de bienvenida -->
+        <xaml:Label Text="�Bienvenido a ChecaTec!"
+               FontSize="24"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               Margin="0,10"/>
+
+        <!-- Bot�n para cerrar sesi�n -->
+        <xaml:Button Text="Cerrar Sesi�n"
+                BackgroundColor="Red"
+                TextColor="White"
+                CornerRadius="10"
+                Clicked="OnLogoutClicked"
+                Margin="0,10"/>
+
+    </xaml:StackLayout>
+</xaml:ContentPage>
